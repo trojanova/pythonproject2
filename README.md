@@ -1,1 +1,1 @@
-# pythonproject2
+This script implements the Bulls and Cows guessing game. In this game, the player tries to guess a secret 4-digit number. After each guess, the player receives feedback in the form of "bulls" (correct digits in the correct position) and "cows" (correct digits in the wrong position). The game tracks the number of attempts and the duration of each game.
