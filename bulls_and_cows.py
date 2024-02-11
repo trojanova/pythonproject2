@@ -1,5 +1,5 @@
 """
-projekt_1.py: první projekt do Engeto Online Python Akademie
+bulls_and_cows.py: druhý projekt do Engeto Online Python Akademie
 author: Tereza Trojanová
 email: trojanovate@gmail.com
 discord: tereza4859
