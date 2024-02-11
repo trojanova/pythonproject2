@@ -20,9 +20,6 @@ def generate_secret():
 
 random_number = generate_secret()
 
-######################################################check
-print("Random 4-digit number:", random_number) 
-
 #define bulls and cows game
 def count_bulls_and_cows(secret, guess):
     secret = str(secret)
