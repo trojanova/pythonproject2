@@ -78,4 +78,12 @@ while True:
       #if the user's guess does not match the generated number, add the number of the attempt and continue the game
       else:
           attempts += 1
-          print("Bulls: " + str(result["bulls"]) + "\nCows: " + str(result["cows"]))
+          if result["bulls"] == 1:
+              bulls_result = "Bull: "
+          else:
+              bulls_result = "Bulls: "
+          if result["cows"] == 1:
+              cows_result = "\nCow: "
+          else:
+              cows_result = "\nCows: "
+          print(bulls_result + str(result["bulls"]) + cows_result + str(result["cows"]))
