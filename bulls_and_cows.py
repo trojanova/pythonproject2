@@ -49,7 +49,7 @@ while True:
   print("-"*50)
   user_input = input("Enter a number:")
   #prepare duplicates check
-  duplicates = [x for n, x in enumerate(str(user_input)) if x in str(user_input)[:n]]
+  duplicates = [digit for digit_index, digit in enumerate(str(user_input)) if digit in str(user_input)[:digit_index]]
   duplicates_check = len(duplicates)
   #check if the user's input if valid, if not, ask the user to try again
   if user_input.isdigit() == False:
@@ -79,4 +79,3 @@ while True:
       else:
           attempts += 1
           print("Bulls: " + str(result["bulls"]) + "\nCows: " + str(result["cows"]))
-          continue
