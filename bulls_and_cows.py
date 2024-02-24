@@ -48,9 +48,9 @@ start_time = time.time()
 while True:
   print("-"*50)
   user_input = input("Enter a number:")
-  #prepare duplicates check
-  duplicates = [digit for digit_index, digit in enumerate(str(user_input)) if digit in str(user_input)[:digit_index]]
-  duplicates_check = len(duplicates)
+  # create set from the input to use it for duplicates check below
+  duplicate_check_prep = set(user_input)
+  unique_digits_count = len(duplicate_check_prep)
   #check if the user's input if valid, if not, ask the user to try again
   if user_input.isdigit() == False:
       print("Your guess contains non numeric symbols, please try again.")
@@ -61,7 +61,7 @@ while True:
   elif int(user_input[0]) == 0:
       print("The first character should not be null.")
       continue
-  elif duplicates_check != 0:
+  elif unique_digits_count < 4:
       print("Your input contains duplicates, please try again.")
       continue
   #in case the input is valid, call the bulls and cows function
