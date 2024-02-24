@@ -14,11 +14,16 @@ print("I've generated a random 4 digit number for you.\nLet's play a bulls and c
 
 #generate secret number
 def generate_secret():
-    number = random.sample(range(1, 10), 4)
-    number = int(''.join(map(str, number)))
-    return number
+    digits = random.sample(range(0, 10), 4)
+    print(digits)
 
-random_number = generate_secret()
+    #if the first digit == 0, shuffle the list, else return the list as a number
+    while digits[0] == 0:
+        random.shuffle(digits)
+        continue
+    else:
+        number = int(''.join(map(str, digits)))
+        return number
 
 #define bulls and cows game
 def count_bulls_and_cows(secret, guess):
@@ -32,7 +37,10 @@ def count_bulls_and_cows(secret, guess):
             cows += 1
     return {"bulls":bulls,"cows":cows}
 
-#user attempts
+#generate the random number
+random_number = generate_secret()
+
+#user attempts/time counter
 attempts = 0
 start_time = time.time()
 
