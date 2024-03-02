@@ -15,7 +15,6 @@ print("I've generated a random 4 digit number for you.\nLet's play a bulls and c
 #generate secret number
 def generate_secret():
     digits = random.sample(range(0, 10), 4)
-    print(digits)
 
     #if the first digit == 0, shuffle the list, else return the list as a number
     while digits[0] == 0:
